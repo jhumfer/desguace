@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+        
+		<record model="ir.ui.view" id="fleet_form_desguace">
+			<field name="name">fleet.vehicle.form.view.desguace</field>
+			<field name="model">fleet.vehicle</field>
+			<field name="inherit_id" ref="fleet.fleet_vehicle_form" />
+			<field name="arch" type="xml">
+				<div class="oe_right oe_button_box" position="inside">
+					<button name="view_piezas" type="object" class="oe_stat_button"
+						help="Piezas del Vehiculo" icon="fa-car">
+						<field name="piezas_count" widget="statinfo" string="Piezas" />
+					</button>
+				</div>
+
+			</field>
+		</record>
+	</data>
+</openerp>
