@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<openerp>
+	<data>
+	<record model="ir.model.access" id="model_access_solicitud">
+			<field name="name">solicitud</field>
+			<field name="perm_read">True</field>
+			<field name="perm_write" eval="True" />
+			<field name="perm_create" eval="True" />
+			<field name="perm_unlink" eval="True" />
+			<field name="group_id" ref="base.group_user" />
+			<field name="model_id" search="[('model','=','product.solicitud')]" />
+		</record>
+	</data>
+</openerp>

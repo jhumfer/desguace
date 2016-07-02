@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
 	<data>
-        
+
 		<record model="ir.ui.view" id="fleet_form_desguace">
 			<field name="name">fleet.vehicle.form.view.desguace</field>
 			<field name="model">fleet.vehicle</field>
@@ -13,6 +13,20 @@
 						<field name="piezas_count" widget="statinfo" string="Piezas" />
 					</button>
 				</div>
+				<field name="acquisition_date" position="before">
+					<field name="produce_date"></field>
+				</field>
+				<field name="transmission" position="before">
+					<field name="motor"></field>
+					<label for="cilindrada"/>
+					<div>
+						<field name="cilindrada" class="oe_inline" /> cm3
+					</div>
+				</field>
+				
+				
+				
+				
 
 			</field>
 		</record>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+
+		<record model="ir.ui.view" id="product_template_search_desguace">
+			<field name="name">product.template.search.view.desguace</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_search_view" />
+			<field name="arch" type="xml">
+				<field name="name" position="after">
+					<field name="vehiculo_marca" />
+					<field name="vehiculo_modelo" />
+					<field name="vehiculo_motor" />
+					<field name="vehiculo_cilindrada" />
+					<field name="vehiculo_caballos" />
+					<field name="vehiculo_produce" />
+				</field>
+
+			</field>
+		</record>
+
+
+	</data>
+</openerp>

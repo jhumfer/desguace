@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+
+		<record id="sequence_solicitud_type" model="ir.sequence.type">
+			<field name="name">Solicitud de Pieza</field>
+			<field name="code">product.solicitud</field>
+		</record>
+
+		<record id="sequence_solicitud" model="ir.sequence">
+			<field name="name">Solicitud de Pieza</field>
+			<field name="code">product.solicitud</field>
+			<field name="prefix">SP</field>
+			<field name="padding">5</field>
+			<field name="number_next">1</field>
+			<field name="number_increment">1</field>
+		</record>
+		
+		<template id="website.somos" name="Que Ofrecemos" page="True">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure" />
+					<div class="container">
+						<h1>Que ofrecemos</h1>
+					</div>
+					<div class="oe_structure" />
+				</div>
+			</t>
+		</template>
+
+	</data>
+	<data>
+
+
+		<record id="solicitud_form" model="ir.ui.view">
+			<field name="name">solicitud.form</field>
+			<field name="model">product.solicitud</field>
+			<field name="arch" type="xml">
+				<form string="Solicitud">
+
+					<sheet>
+
+						<div class="oe_left" style="width: 500px;">
+							<div class="oe_title" style="width: 390px;">
+								<h1>
+									<field name="name" readonly="1" />
+								</h1>
+							</div>
+						</div>
+
+						<group string="Conductor" col="4">
+							<field name="nombre" />
+							<field name="apellidos" />
+							<field name="email" />
+							<field name="telefono" />
+							<field name="direccion" />
+							<field name="ciudad" />
+							<field name="provincia_id" />
+							<field name="zip" />
+						</group>
+						<group string="Vehiculo" col="4">
+							<field name="marca_id" />
+							<field name="modelo" />
+							<field name="motor" />
+							<field name="produce_date" />
+						</group>
+						<group string="Comentarios" col="4">
+							<field name="comentarios" nolabel="1" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record id="solicitud_tree" model="ir.ui.view">
+			<field name="name">solicitud.tree</field>
+			<field name="model">product.solicitud</field>
+			<field name="arch" type="xml">
+				<tree string="Solicitud">
+					<field name="name" />
+					<field name="create_date" />
+					<field name="marca_id" />
+					<field name="modelo" />
+					<field name="pieza" />
+					<field name="comentarios" />
+
+				</tree>
+			</field>
+		</record>
+
+		<record id="solicitud_search" model="ir.ui.view">
+			<field name="name">solicitud.search</field>
+			<field name="model">product.solicitud</field>
+			<field name="arch" type="xml">
+				<search string="Búsqueda de Solicitudes">
+					<field name="name" />
+					<field name="marca_id" />
+					<field name="modelo" />
+					<field name="pieza" />
+				</search>
+			</field>
+		</record>
+
+		<record id="action_solicitud_tree" model="ir.actions.act_window">
+			<field name="name">Solicitudes</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">product.solicitud</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="solicitud_menu" action="action_solicitud_tree"
+			name="Solicitudes" parent="base.menu_product" sequence="120" />
+
+		<record model="crm.tracking.medium" id="solicitud_medium_website">
+			<field name="name">Website</field>
+		</record>
+
+		<record id="menu_solicitud" model="website.menu">
+			<field name="name">Solicitud</field>
+			<field name="url">/page/website.solicitud_pieza</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">600</field>
+		</record>
+
+		<template id="website.solicitud_pieza" name="Solicitud" page="True">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure" />
+					<div class="container">
+						<h1>Solicitud</h1>
+						<div class="row">
+							<div class="col-md-8">
+								<form action="/desguace/solicitud_pieza" method="post"
+									class="form-horizontal mt32" enctype="multipart/form-data">
+									<div
+										t-attf-class="form-group #{error and 'nombre' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="nombre">Nombre
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="text" class="form-control" name="nombre"
+												t-attf-value="#{nombre or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'apellidos' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="apellidos">Apellidos
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="text" class="form-control" name="apellidos"
+												t-attf-value="#{apellidos or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'telefono' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="telefono">Telefono
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="text" class="form-control" name="telefono"
+												t-attf-value="#{telefono or ''}" />
+										</div>
+									</div>
+									<div name="email_from_container"
+										t-attf-class="form-group #{error and 'email' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="email">Email
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="email" class="form-control" name="email"
+												required="True" t-attf-value="#{emaill or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'direccion' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="direccion">Direccion
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="text" class="form-control" name="direccion"
+												t-attf-value="#{direccion or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'ciudad' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="ciudad">Ciudad
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="text" class="form-control" name="ciudad"
+												t-attf-value="#{ciudad or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'provincia_id' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="provincia_id">Provincia
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<select t-if="provincia_id" name="provincia_id" class="form-control">
+												<t t-foreach="provincia_id" t-as="provincia">
+													<option t-att-value="provincia.id" t-esc="provincia.name" />
+												</t>
+											</select>
+										</div>
+									</div>
+									
+									<div
+										t-attf-class="form-group #{error and 'zip' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="zip">CP
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="number" class="form-control" name="zip"
+												t-attf-value="#{zip or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'marca_id' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="marca_id">Marca
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<select t-if="marca_id" name="marca_id" class="form-control">
+												<t t-foreach="marca_id" t-as="marca">
+													<option t-att-value="marca.id" t-esc="marca.name" />
+												</t>
+											</select>
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'modelo' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="modelo">Modelo
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="text" class="form-control" name="modelo"
+												t-attf-value="#{modelo or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'motor' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="motor">Motor
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="text" class="form-control" name="motor"
+												t-attf-value="#{motor or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'produce_date' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="produce_date">Fecha
+											de Fabricacion
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input type="text" class="form-control" name="produce_date"
+												t-attf-value="#{produce_date or ''}" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'file' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="attachment">File
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<input name="attachment" type="file" class="file"
+												data-show-upload="true" data-show-caption="true" lass="file"
+												data-show-preview="true" />
+										</div>
+									</div>
+									<div
+										t-attf-class="form-group #{error and 'comentarios' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="comentarios">Comentarios
+										</label>
+										<div class="col-md-7 col-sm-8">
+											<textarea class="form-control" name="comentarios"
+												style="min-height: 120px" required="False">
+												<t t-esc="comentarios or ''" />
+											</textarea>
+										</div>
+									</div>
+									<t t-foreach="kwargs" t-as="kwarg">
+										<input type="hidden" t-att-name="kwarg[0]" t-att-value="kwarg[1]" />
+									</t>
+
+									<div class="form-group">
+										<div class="col-md-offset-3 col-sm-offset-4 col-sm-8 col-md-7">
+											<button class="btn btn-primary btn-lg">Send</button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+					<div class="oe_structure" />
+				</div>
+			</t>
+		</template>
+
+		<template id="website.solicitud_thanks" name="Contact us">
+			<t t-call="website.layout">
+				<div id="wrap">
+					<div class="oe_structure" />
+					<div class="container">
+						<h1>Gracias!</h1>
+						<div class="row">
+							<div class="col-md-8">
+								<div class="alert alert-success">
+									Su solicitud ha sido enviada.
+									<button type="button" class="close" data-dismiss="alert">&amp;times;
+									</button>
+								</div>
+								<p>
+									Pronto nos pondremos en contacto contigo.
+								</p>
+								<p class="mt64">
+									Si necesita contactar, puede llamar o enviar un email:
+								</p>
+								<ul class="list-unstyled">
+									<li>
+										<i class="fa fa-phone"></i>
+										:
+										<span t-field="res_company.phone" />
+									</li>
+									<li>
+										<i class="fa fa-envelope"></i>
+										:
+										<span t-field="res_company.email" />
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-4">
+								<t t-call="website.company_description" />
+							</div>
+						</div>
+					</div>
+					<div class="oe_structure" />
+				</div>
+			</t>
+		</template>
+
+
+
+		<record id="menu_somos" model="website.menu">
+			<field name="name">Que Ofrecemos</field>
+			<field name="url">/page/website.somos</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">700</field>
+		</record>
+
+	</data>
+</openerp>

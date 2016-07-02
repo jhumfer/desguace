@@ -27,33 +27,36 @@ from openerp.exceptions import except_orm, Warning, RedirectWarning
 from openerp.tools import float_compare
 import openerp.addons.decimal_precision as dp
 
-class FleetVehicle(models.Model):
-    _inherit = "fleet.vehicle"
+class ProductSolicitud(models.Model):
+    _name = "product.solicitud"
+    _description = "Solicitud de Pieza"
+ 
+    name = fields.Char(string='Solicitud',default=lambda self: self.env['ir.sequence'].get('product.solicitud') or '/')
     
-    @api.one
-    def _piezas_count(self):
-        self.piezas_count = len(self.env['product.product'].search([('vehiculo_id', '=',self.id)]))
-
-    piezas_count = fields.Integer(string='# Piezas', type='integer', compute='_piezas_count')
-                   
-    @api.multi
-    def view_piezas(self):
-        mod_obj = self.env['ir.model.data']
-        dummy, action_id = tuple(mod_obj.get_object_reference('product', 'product_normal_action'))
-        action = self.pool.get('ir.actions.act_window').read(self._cr, self._uid, action_id, context=self._context)
-
-        p_ids = []
-        for vh in self:
-            for p in self.env['product.product'].search([('vehiculo_id', '=',self.id)]):
-                    p_ids += [p.id]
-        action['domain'] = "[('id','in',[" + ','.join(map(str, p_ids)) + "])]"
-
-        return action
+    nombre  = fields.Char('Nombre')
+    
+    apellidos  = fields.Char('Apellidos')
+    
+    direccion  = fields.Char('Direccion')
+    
+    ciudad  = fields.Char('Ciudad')
+    
+    provincia_id = fields.Many2one("res.country.state", string='Provincia')
+    
+    zip = fields.Char('CP')
+    
+    email = fields.Char('Email')
+    
+    telefono =  fields.Char('Telefono')
+    
+    marca_id = fields.Many2one("fleet.vehicle.model.brand", string='Marca')
+    
+    modelo = fields.Char(string='Modelo')
     
     motor = fields.Char(string='Motor')
     
-    cilindrada = fields.Integer(string='Cilindrada')
+    produce_date = fields.Char(string='Fecha de Fabricacion')
     
-    produce_date = fields.Date(string='Fecha de Fabricacion', help='Indica la fecha en la que ha sido fabricacion')
+    pieza = fields.Char(string='Pieza')
     
-
+    comentarios = fields.Text(string='Comentarios')
