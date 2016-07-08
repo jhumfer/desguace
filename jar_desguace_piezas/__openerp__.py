@@ -28,7 +28,7 @@
     Busqueda de Piezas
 """,
     'author': 'JAR',
-    'depends': ['jar_desguace_fleet','document'],
+    'depends': ['jar_desguace_fleet','document','website_crm'],
     'data': [
              'security/solicitud_security.xml',
              'views/product_view.xml',

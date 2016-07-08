@@ -16,17 +16,7 @@
 			<field name="number_increment">1</field>
 		</record>
 		
-		<template id="website.somos" name="Que Ofrecemos" page="True">
-			<t t-call="website.layout">
-				<div id="wrap">
-					<div class="oe_structure" />
-					<div class="container">
-						<h1>Que ofrecemos</h1>
-					</div>
-					<div class="oe_structure" />
-				</div>
-			</t>
-		</template>
+		
 
 	</data>
 	<data>
@@ -333,12 +323,7 @@
 
 
 
-		<record id="menu_somos" model="website.menu">
-			<field name="name">Que Ofrecemos</field>
-			<field name="url">/page/website.somos</field>
-			<field name="parent_id" ref="website.main_menu" />
-			<field name="sequence" type="int">700</field>
-		</record>
+		
 
 	</data>
 </openerp>

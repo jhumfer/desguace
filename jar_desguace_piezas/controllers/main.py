@@ -162,10 +162,3 @@ class solicitud_pieza(http.Controller):
         cr, context = request.cr, request.context
 
         return request.registry['product.solicitud'].create(cr, SUPERUSER_ID, values, context=dict(context))
-
-class somos(http.Controller):
-
-    @http.route(['/page/website.somos'], type='http', auth="public", website=True)
-    def solicitud(self, **kwargs):
-        values = {}
-        return request.website.render("website.somos", values)
