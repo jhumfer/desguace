@@ -44,7 +44,7 @@ class solicitud_pieza(http.Controller):
     @http.route(['/page/website.solicitud_pieza'], type='http', auth="public", website=True)
     def solicitud(self, **kwargs):
         values = {}
-        for field in ['nombre','apellidos','email','telefono','direccion','ciudad','provincia_id','zip',
+        for field in ['nombre','apellidos','email','telefono','direccion','ciudad','provincia_id','cp',
                       'marca_id','modelo','motor','produce_date','pieza',
                       'comentarios','file']:
             if kwargs.get(field):

@@ -43,7 +43,7 @@ class ProductSolicitud(models.Model):
     
     provincia_id = fields.Many2one("res.country.state", string='Provincia')
     
-    zip = fields.Char('CP')
+    cp = fields.Char('CP')
     
     email = fields.Char('Email')
     

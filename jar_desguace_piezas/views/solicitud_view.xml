@@ -46,7 +46,7 @@
 							<field name="direccion" />
 							<field name="ciudad" />
 							<field name="provincia_id" />
-							<field name="zip" />
+							<field name="cp" />
 						</group>
 						<group string="Vehiculo" col="4">
 							<field name="marca_id" />
@@ -107,7 +107,7 @@
 		</record>
 
 		<record id="menu_solicitud" model="website.menu">
-			<field name="name">Solicitud</field>
+			<field name="name">Solicita una Pieza</field>
 			<field name="url">/page/website.solicitud_pieza</field>
 			<field name="parent_id" ref="website.main_menu" />
 			<field name="sequence" type="int">600</field>
@@ -118,7 +118,7 @@
 				<div id="wrap">
 					<div class="oe_structure" />
 					<div class="container">
-						<h1>Solicitud</h1>
+						<h1>Solicita una Pieza</h1>
 						<div class="row">
 							<div class="col-md-8">
 								<form action="/desguace/solicitud_pieza" method="post"
@@ -191,12 +191,12 @@
 									</div>
 									
 									<div
-										t-attf-class="form-group #{error and 'zip' in error and 'has-error' or ''}">
-										<label class="col-md-3 col-sm-4 control-label" for="zip">CP
+										t-attf-class="form-group #{error and 'cp' in error and 'has-error' or ''}">
+										<label class="col-md-3 col-sm-4 control-label" for="cp">CP
 										</label>
 										<div class="col-md-7 col-sm-8">
-											<input type="number" class="form-control" name="zip"
-												t-attf-value="#{zip or ''}" />
+											<input type="text" class="form-control" name="cp"
+												t-attf-value="#{cp or ''}" />
 										</div>
 									</div>
 									<div
@@ -231,8 +231,7 @@
 									</div>
 									<div
 										t-attf-class="form-group #{error and 'produce_date' in error and 'has-error' or ''}">
-										<label class="col-md-3 col-sm-4 control-label" for="produce_date">Fecha
-											de Fabricacion
+										<label class="col-md-3 col-sm-4 control-label" for="produce_date">Fabricacion
 										</label>
 										<div class="col-md-7 col-sm-8">
 											<input type="text" class="form-control" name="produce_date"
