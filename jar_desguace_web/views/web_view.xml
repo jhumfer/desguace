@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Home template -->
+		<template inherit_id="website.homepage" name="Home">			
+    		<xpath expr="//div[@id='wrap']" position="replace">    			
+    			<div id="wrap" class="oe_structure oe_empty">
+    				<div class="carousel slide mb32" id="myCarousel_1468055510356" style="height: 320px;">
+				        <ol class="carousel-indicators">
+				          <li class="active" data-slide-to="0" data-target="#myCarousel_1468055510356"/>
+				          <li data-slide-to="1" data-target="#myCarousel_1468055510356"/>
+				        </ol>
+				        <div class="carousel-inner">
+				          <div class="item oe_img_bg active" style="background-image: url(&quot;http://localhost:8069/jar_desguace_web/static/src/img/background_carrusel.jpeg&quot;);">
+				            <div class="container">
+				              <div class="row content">
+				                <div class="carousel-content col-md-6 col-sm-12 mt32">
+				                  <h2>Bienvenido</h2>
+				                  <h3>Somos Desguace Diego</h3>
+				                  <p>En esta web podrá solicitar cualquier pieza que necesite para su vehículo sin ningún tipo de comprosio. Nosotros se la faciletaremos con ayuda de los datos que nos aportes.</p>
+				                  <p>
+				                    <a class="btn btn-success" href="/page/website.solicitud_pieza">Solicita tu pieza</a>
+				                  </p>
+				                </div>
+				                <div class="carousel-img col-md-6 hidden-sm hidden-xs"/>
+				              </div>
+				            </div>
+				          </div>
+				          <div class="item oe_img_bg" style="background-image: url(&quot;http://localhost:8069/jar_desguace_web/static/src/img/background_carrusel_2.jpg&quot;);">
+				            <div class="container">
+				              <div class="row content">
+				                <div class="carousel-content col-md-6 col-sm-12">&amp;nbsp;
+									<h3>Si tiene cualquier duda contacte con nosotros y le ayudaremos</h3>
+
+									<p><a class="btn btn-success" href="/page/contactus">Contacto</a></p>
+								</div>
+				                <div class="carousel-img col-md-6 hidden-sm hidden-xs"/>
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				        <div class="carousel-control left" data-slide="prev" data-target="#myCarousel_1468055510356" href="#myCarousel_1468055510356" style="width: 10%">
+				          <i class="fa fa-chevron-left" style=""/>
+				        </div>
+				        <div class="carousel-control right" data-slide="next" data-target="#myCarousel_1468055510356" href="#myCarousel_1468055510356" style="width: 10%">
+				          <i class="fa fa-chevron-right" style=""/>
+				        </div>
+				      </div>
+				      <hr class="s_separator" style="&#10;    width: 50%;&#10;"/>
+				      <section class="s_features">
+				        <div class="container">
+				          <div class="row mt16 mb16">
+				            <div class="col-md-4 text-center">
+				              <span class="o_animate fa fa-stack-overflow fa-5x" style="transition: none; animation-play-state: paused;"/>
+				              <h3 class="mt8 mb0">Amplio Stock</h3>
+				              <div class="text-muted">Disponemos de un amplio stock de recambio de ocasión.</div>
+				            </div>
+				            <div class="col-md-4 text-center">
+				              <span class="o_animate fa fa-eur fa-5x" style="transition: none; animation-play-state: paused;"/>
+				              <h3 class="mt8 mb0">Precios competitivos</h3>
+				              <div class="text-muted">En general el precio del recambio de ocasión es un 80% más barato que el nuevo<span style="line-height: 1.42857;">.</span></div>
+				            </div>
+				            <div class="col-md-4 text-center">
+				              <span class="o_animate fa fa-users fa-5x" style="transition: none; animation-play-state: paused;"/>
+				              <h3 class="mt8 mb0">Soporte</h3>
+				              <div class="text-muted">Queremos ayudarle en todo lo que necesite<span style="line-height: 1.42857;">.</span></div>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+				      <hr class="s_separator" style="&#10;    width: 50%;&#10;"/>
+				      <section class="s_title">
+				        <div class="container">
+				          <div class="row">
+				            <div class="col-md-12 mb0">
+				              <h1 class="text-center">
+				                <span style="color: inherit; font-family: inherit; line-height: 1.1;">Proceso</span>
+				              </h1>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+				      <section class="s_text_image o_animate o_anim_fade_in_left" style="animation-play-state: paused;">
+				        <div class="container">
+				          <div class="row">
+				            <div class="col-md-6 mt16">
+				              <h3>Recepción vehículo</h3>
+				              <p>Verificamos escrupulosamente el estado del vehículo.<span style="line-height: 1.42857143;">&amp;nbsp;En función del mismo determinamos el conjunto de piezas que vamos a reciclar.</span></p>
+				            </div>
+				            <div class="col-md-6 o_animate mb16 mt32" style="animation-play-state: paused;">
+				              <span alt="Odoo text and image block" class="img-responsive mb16 o_animate fa fa-user-md fa-5x" src="/website/static/src/img/text_image.png" style="transition: none; animation-play-state: paused;"/>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+				      <section class="s_image_text o_animate o_anim_fade_in_right" style="animation-play-state: paused;">
+				        <div class="container">
+				          <div class="row">
+				            <div class="col-md-6 mt48">
+				              <span alt="Odoo image and text block" class="img-responsive mb16 o_animate fa fa-pagelines fa-5x shadow" src="/website/static/src/img/image_text.jpg" style="animation-play-state: paused;"/>
+				            </div>
+				            <div class="col-md-6 mt16">
+				              <h3>Descontaminación</h3>
+				              <p>
+				                <span style="line-height: 1.42857;">Extraemos del vehículo todos los residuos marcados por la ley; aceites, baterias, ...</span>
+				                <br/>
+				                <span style="line-height: 1.42857;"/>
+				              </p>
+				              <p>Todos estos residuos son almacenados segun las indicaciones de nuestro Gestor de Residuos autorizado, quien se encargara de su posterior eliminación.</p>
+				              <p>
+				                <span style="line-height: 1.42857;">.</span>
+				              </p>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+				      <section class="s_text_image o_animate o_anim_fade_in_left" style="animation-play-state: paused;">
+				        <div class="container">
+				          <div class="row">
+				            <div class="col-md-6 mt0 mb0">
+				              <h3>
+				                <span style="line-height: 1.1;">Desmontaje</span>
+				                <br/>
+				                <span style="font-size: 14px; line-height: 1.42857;"/>
+				              </h3>
+				              <p>Desmontamos del vehículo aquellas piezas, que según hemos determinado en la Recepción del vehículo, pueden ser recicladas con la calidad requerida.</p>
+				              <p>El resto del vehículo lo trasladaremos a una de nuestras campas.<span style="line-height: 1.42857; color: inherit; font-family: inherit;">.</span></p>
+				            </div>
+				            <div class="col-md-6 mt16">
+				              <span alt="Odoo text and image block" class="img-responsive shadow mb16 o_animate fa fa-wrench fa-5x" src="/website/static/src/img/text_image.png" style="transition: none; animation-play-state: paused;"/>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+				      <section class="s_image_text o_animate o_anim_fade_in_right" style="animation-play-state: paused;">
+				        <div class="container">
+				          <div class="row">
+				            <div class="col-md-6 mt48 mb0">
+				              <span alt="Odoo image and text block" class="img-responsive mb16 shadow o_animate fa fa-puzzle-piece fa-5x" src="/website/static/src/img/image_text.jpg" style="transition: none; animation-play-state: paused;"/>
+				            </div>
+				            <div class="col-md-6 mt16">
+				              <h3 style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(102, 102, 102);">Almacenaje</h3>
+				              <p>
+				                <span style="line-height: 1.42857;">Todas las piezas recicladas, provenientes del desmontaje, son de nuevo verificadas.</span>
+				                <br/>
+				                <span style="line-height: 1.42857;"/>
+				              </p>
+				              <p>Si se determina que su estado es correcto, procedemos a su etiquetaje, fotografiado y ubicación dentro de uno de nuestros almacenes.</p>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+				      <hr class="s_separator" style="&#10;    width: 50%;&#10;"/>
+    			</div>
+    		</xpath>
+    	</template>
+
+    	<!-- Aboutus template -->
+		<template inherit_id="website.aboutus" name="About us">
+    		<xpath expr="//div[@id='wrap']" position="replace">
+    			<div id="wrap" class="oe_structure oe_empty">
+    				<section class="s_title">
+				        <div class="container">
+				          <div class="row">
+				            <div class="col-md-12">
+				              <h1 class="text-center">Desguace Diego</h1>
+				              <h3 class="text-muted text-center"/>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+				      <section class="s_text_block">
+				        <div class="container">
+				          <div class="row">
+				            <div class="col-md-12 mb16 mt16">
+				              <p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.</p>
+				              <p><b>Las grandes historias tienen personalidad.&amp;nbsp;</b>Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles.</p>
+				              <p><b>Las grandes historias son para todos incluso cuando se han escrito sólo para una persona.</b> Usa un diccionario de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc...</p>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+				      <section class="s_image_text">
+				        <div class="container">
+				          <div class="row">
+				            <div class="col-md-6 mt16">
+				              <img alt="Odoo image and text block" class="img img-responsive shadow mb16" src="/website/static/src/img/image_text.jpg"/>
+				            </div>
+				            <div class="col-md-6 mt16">
+				              <h3>Un subtítulo de sección</h3>
+				              <p>El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.</p>
+				            </div>
+				          </div>
+				        </div>
+				      </section>
+    			</div>
+    		</xpath>
+    	</template>
+		
+		<!-- Services template -->
+		<template id="website.services" name="Servicios" page="True">
+			<t t-call="website.layout">
+			    <div id="wrap">
+			      <div class="oe_structure">
+			        <section class="s_title">
+			          <div class="container">
+			            <div class="row">
+			              <div class="col-md-12">
+			                <h1 class="text-center">Nuestros servicios</h1>
+			                <h3 class="text-muted text-center"/>
+			              </div>
+			            </div>
+			          </div>
+			        </section>
+			        <section class="s_three_columns">
+			          <div class="container">
+			            <div class="row">
+			              <div class="col-md-4">
+			                <img alt="Odoo - Sample 1 for three columns" class="img img-rounded img-responsive" src="/website/static/src/img/desert_thumb.jpg"/>
+			                <h4 class="mt16">Característica uno</h4>
+			                <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta). Lo mejor en textos</p>
+			              </div>
+			              <div class="col-md-4">
+			                <img alt="Odoo - Sample 2 for three columns" class="img img-rounded img-responsive" src="/website/static/src/img/deers_thumb.jpg"/>
+			                <h4 class="mt16">Característica dos</h4>
+			                <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>
+			              </div>
+			              <div class="col-md-4">
+			                <img alt="Odoo - Sample 3 for three columns" class="img img-rounded img-responsive" src="/website/static/src/img/china_thumb.jpg"/>
+			                <h4 class="mt16">Característica tres</h4>
+			                <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta)</p>
+			              </div>
+			            </div>
+			          </div>
+			        </section>
+			      </div>			      
+			    </div>
+		  	</t>
+		</template>
+
+		<!-- Footer template -->
+		<template>
+			<data inherit_id="website.footer_custom" customize_show="True" name="Custom JAR Footer">
+	  			<xpath expr="//div[@id='footer']" position="replace">
+	  				<div class="container hidden-print">
+				      <div class="row">
+				        <div class="col-md-3">
+				          <h4>Nuestros productos y servicios</h4>
+				          <ul class="list-unstyled" id="products">
+				            <li>
+				              <a href="/page/website.solicitud_pieza">Solicitud de Pieza</a>
+				            </li>
+				            <li>
+				              <a href="/page/website.solicitud_pieza">Condiciones de compra</a>
+				            </li>
+				          </ul>
+				        </div>
+				        <div class="col-md-3" id="info">
+				          <h4>Conecta con nosotros</h4>
+				          <ul class="list-unstyled">
+				            <li>
+				              <a href="/page/website.contactus">Contáctenos</a>
+				            </li>
+				            <li>
+				              <a href="/page/website.contactus">Noticias</a>
+				            </li>
+				          </ul>
+				          <ul class="list-unstyled">
+				            <li t-ignore="true">
+				              <i class="fa fa-phone"/>
+				              <span t-field="res_company.phone"/>
+				            </li>
+				            <li t-ignore="true">
+				              <i class="fa fa-envelope"/>
+				              <span t-field="res_company.email"/>
+				            </li>
+				          </ul>
+				          <h2>
+				            <a t-att-href="website.social_facebook" t-if="website.social_facebook">
+				              <i class="fa fa-facebook-square"/>
+				            </a>
+				            <a t-att-href="website.social_twitter" t-if="website.social_twitter">
+				              <i class="fa fa-twitter"/>
+				            </a>
+				            <a t-att-href="website.social_linkedin" t-if="website.social_linkedin">
+				              <i class="fa fa-linkedin"/>
+				            </a>
+				            <a t-att-href="website.social_youtube" t-if="website.social_youtube">
+				              <i class="fa fa-youtube-play"/>
+				            </a>
+				            <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher">
+				              <i class="fa fa-google-plus-square"/>
+				            </a>
+				            <a t-att-href="website.social_github" t-if="website.social_github">
+				              <i class="fa fa-github"/>
+				            </a>
+				          </h2>
+				        </div>
+				        <div class="col-md-5 col-lg-offset-1">
+				          <div>
+				            <h4>
+				              <span class="" t-field="res_company.name"/>
+				            </h4>
+				            <p>Centro autorizado para el Tratamiento de Vehículos Fuera de Uso</p>
+				          </div>
+				        </div>
+				      </div>
+				    </div>			    
+	    		</xpath>
+	    	</data>
+    	</template>
+	</data>
+
+	<!-- Menu Servicios -->
+	<data>
+		<record id="menu_servicios" model="website.menu">
+			<field name="name">Servicios</field>
+			<field name="url">/page/services</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">700</field>
+		</record>
+	</data>
+
+	<!-- Menu Empresa -->
+	<data>
+		<record id="menu_empresa" model="website.menu">
+			<field name="name">Empresa</field>
+			<field name="url">/page/aboutus</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">600</field>
+		</record>
+	</data>
+</openerp>
