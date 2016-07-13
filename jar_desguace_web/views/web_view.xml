@@ -5,13 +5,14 @@
 		<template inherit_id="website.homepage" name="Home">			
     		<xpath expr="//div[@id='wrap']" position="replace">    			
     			<div id="wrap" class="oe_structure oe_empty">
+    				<link rel='stylesheet' href='/jar_desguace_web/static/src/css/desguace.css'/>
     				<div class="carousel slide mb32" id="myCarousel_1468055510356" style="height: 320px;">
 				        <ol class="carousel-indicators">
 				          <li class="active" data-slide-to="0" data-target="#myCarousel_1468055510356"/>
 				          <li data-slide-to="1" data-target="#myCarousel_1468055510356"/>
 				        </ol>
 				        <div class="carousel-inner">
-				          <div class="item oe_img_bg active" style="background-image: url(&quot;http://localhost:8069/jar_desguace_web/static/src/img/background_carrusel.jpeg&quot;);">
+				          <div class="item oe_img_bg active" style="background-image: url(&quot;http://localhost:8075/jar_desguace_web/static/src/img/background_carrusel.jpeg&quot;);">
 				            <div class="container">
 				              <div class="row content">
 				                <div class="carousel-content col-md-6 col-sm-12 mt32">
@@ -26,7 +27,7 @@
 				              </div>
 				            </div>
 				          </div>
-				          <div class="item oe_img_bg" style="background-image: url(&quot;http://localhost:8069/jar_desguace_web/static/src/img/background_carrusel_2.jpg&quot;);">
+				          <div class="item oe_img_bg" style="background-image: url(&quot;http://localhost:8075/jar_desguace_web/static/src/img/background_carrusel_2.jpg&quot;);">
 				            <div class="container">
 				              <div class="row content">
 				                <div class="carousel-content col-md-6 col-sm-12">&amp;nbsp;
