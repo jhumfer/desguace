@@ -73,7 +73,7 @@ class solicitud_pieza(http.Controller):
 
         _TECHNICAL = ['show_info', 'view_from', 'view_callback']  # Only use for behavior, don't stock it
         _BLACKLIST = ['id', 'create_uid', 'create_date', 'write_uid', 'write_date', 'user_id', 'active']  # Allow in description
-        _REQUIRED = ['email']  # Could be improved including required from model
+        _REQUIRED = ['telefono']  # Could be improved including required from model
         _TEAMVIEWER = ['file']
 
         post_file = []  # List of file to add to ir_attachment once we have the ID
@@ -122,7 +122,7 @@ class solicitud_pieza(http.Controller):
             Attachments = request.registry['ir.attachment']
             name = kwargs.get('attachment').filename      
             file = kwargs.get('attachment')
-            attachment_id = Attachments.create(request.cr, request.uid, {
+            attachment_id = Attachments.create(request.cr, SUPERUSER_ID, {
                 'name':name,
                 'res_name': name,
                 'type': 'binary',
